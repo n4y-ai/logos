@@ -37,28 +37,21 @@
 
 ---
 
-## Готовые к деплою компоненты
+## LogosAccountFactory (Smart Account Factory)
 
-**Репозиторий:** https://github.com/n4y-ai/logos-protocol
+| Параметр | Значение |
+|----------|----------|
+| **Адрес** | `0xc70230FfE1bB39c8aeDE63aedf2026372aa7d514` |
+| **Сеть** | Base Mainnet (chainId: 8453) |
+| **Статус** | ✅ LIVE |
+| **Дата деплоя** | 2024-12-17 |
 
-| Контракт | Статус | Тесты |
-|----------|--------|-------|
-| LogosAccount | ✅ Готов | 25/25 ✅ |
-| LogosAccountFactory | ✅ Готов | 25/25 ✅ |
+**Функции:**
+- `createLogos(owner, agent, handle)` — создать Smart Account + зарегистрировать handle
+- `ownerToAccount(address)` → `address` — получить аккаунт по owner
+- `totalAccounts()` → `uint256` — количество созданных аккаунтов
 
-### LogosAccountFactory
-
-Создаёт Smart Account с двумя ключами (owner + agent).
-
-**Деплой:**
-```bash
-cd logos-protocol
-npm run deploy:base
-```
-
-**Зависимости:**
-- Требует адрес NameRegistry (уже задеплоен)
-- Требует ETH на gas для деплоя (~0.001 ETH)
+**Исходный код:** https://github.com/n4y-ai/logos-protocol/blob/main/contracts/core/LogosAccountFactory.sol
 
 ---
 
