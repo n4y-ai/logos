@@ -25,7 +25,7 @@
 - `resolveHandle(string _handle)` → `address` — получить владельца handle
 - `registeredHandles(address)` → `string` — получить handle по адресу
 
-**Исходный код:** `n4y.ai/demo/contracts/core/NameRegistry.sol`
+**Исходный код:** https://github.com/n4y-ai/logos-protocol/blob/main/contracts/core/NameRegistry.sol
 
 ---
 
@@ -39,12 +39,12 @@
 
 ## Готовые к деплою компоненты
 
-| Контракт | Статус | Путь | Тесты |
-|----------|--------|------|-------|
-| LogosAccount | ✅ Готов | `demo/contracts/core/LogosAccount.sol` | 15/16 ✅ |
-| LogosAccountFactory | ✅ Готов | `demo/contracts/core/LogosAccountFactory.sol` | ✅ |
-| TreasuryMultisig2of3 | ⏸️ Ожидает | `demo/contracts/core/TreasuryMultisig2of3.sol` | ✅ |
-| LogosRegisterPaymaster | ⏸️ Ожидает | `demo/contracts/core/LogosRegisterPaymaster.sol` | ✅ |
+**Репозиторий:** https://github.com/n4y-ai/logos-protocol
+
+| Контракт | Статус | Тесты |
+|----------|--------|-------|
+| LogosAccount | ✅ Готов | 25/25 ✅ |
+| LogosAccountFactory | ✅ Готов | 25/25 ✅ |
 
 ### LogosAccountFactory
 
@@ -52,20 +52,13 @@
 
 **Деплой:**
 ```bash
-cd demo
-npx hardhat run scripts/deploy-factory.js --network base
+cd logos-protocol
+npm run deploy:base
 ```
 
 **Зависимости:**
 - Требует адрес NameRegistry (уже задеплоен)
 - Требует ETH на gas для деплоя (~0.001 ETH)
-
-### Отложенные компоненты
-
-| Контракт | Причина |
-|----------|---------|
-| TreasuryMultisig2of3 | Требуется 3 уникальных адреса для 2-of-3 |
-| LogosRegisterPaymaster | Зависит от Treasury |
 
 ---
 
@@ -74,7 +67,7 @@ npx hardhat run scripts/deploy-factory.js --network base
 ### Вариант 1: Через скрипт (требуется ETH на Base)
 
 ```bash
-cd n4y.ai/demo
+cd logos-protocol
 HANDLE=YOURNAME npx hardhat run scripts/register-handle.js --network base
 ```
 
@@ -113,37 +106,10 @@ await contract.registerName('YOURHANDLE');
 
 ---
 
-## Backend API
-
-**Путь:** `demo/backend-service/`
-
-| Endpoint | Метод | Описание |
-|----------|-------|----------|
-| `/api/logos/health` | GET | Health check |
-| `/api/logos/check/:handle` | GET | Проверка доступности handle |
-| `/api/logos/create` | POST | Создание Логоса (генерация agent key) |
-| `/api/logos/:handle` | GET | Информация о Логосе |
-| `/api/did/:did` | GET | DID Resolution |
-| `/api/logos/:handle/sign` | POST | Подпись от имени agent |
-
-**Запуск:**
-```bash
-cd demo/backend-service
-npm install
-node server.js
-```
-
-**Переменные окружения:**
-- `NETWORK_RPC_URL` — RPC URL (default: https://mainnet.base.org)
-- `PRIVATE_KEY` — Приватный ключ для транзакций
-- `NAME_REGISTRY_ADDRESS` — Адрес NameRegistry
-- `LOGOS_FACTORY_ADDRESS` — Адрес Factory (опционально)
-
----
-
 ## Frontend
 
-**Путь:** `n4y.ai/`
+**Репозиторий:** https://github.com/n4y-ai/n4y.ai  
+**Production:** https://n4y.ai
 
 | Страница | Описание |
 |----------|----------|

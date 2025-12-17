@@ -139,3 +139,4 @@ function createLogos(
 | `n4y.ai/lib/logos-wallet.ts` | Frontend crypto |
 | `n4y.ai/app/create/page.tsx` | UI создания |
 
+
