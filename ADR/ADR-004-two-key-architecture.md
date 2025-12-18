@@ -126,17 +126,17 @@ function createLogos(
 - [x] Тесты подтверждают разграничение прав (15/16 passing)
 - [x] Backend генерирует и хранит agent keys
 - [x] Frontend генерирует owner key и шифрует паролем
-- [ ] E2E тест полного flow создания Логоса
+- [x] E2E тест полного flow создания Логоса
 
 ## Связанные файлы
 
 | Файл | Описание |
 |------|----------|
-| `demo/contracts/core/LogosAccount.sol` | Smart Account контракт |
-| `demo/contracts/core/LogosAccountFactory.sol` | Factory контракт |
-| `demo/test/LogosAccount.test.cjs` | Тесты контрактов |
-| `demo/backend-service/logos-api.js` | Backend API |
-| `n4y.ai/lib/logos-wallet.ts` | Frontend crypto |
-| `n4y.ai/app/create/page.tsx` | UI создания |
+| `logos-protocol/contracts/core/LogosAccount.sol` | Smart Account контракт |
+| `logos-protocol/contracts/core/LogosAccountFactory.sol` | Factory контракт |
+| `logos-protocol/backend/server.js` | Backend API (create/auth/chat) |
+| `n4y.ai/n4y.ai/lib/logos-wallet.ts` | Frontend crypto + backup/restore |
+| `n4y.ai/n4y.ai/app/create/page.tsx` | UI создания + экспорт/импорт |
+| `n4y.ai/n4y.ai/app/page.tsx` | Главная: авторизация + вход по `.logos` |
 
 

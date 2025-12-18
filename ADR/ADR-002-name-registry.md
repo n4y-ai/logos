@@ -7,9 +7,10 @@
 
 | Сеть | Адрес | TX |
 |------|-------|-----|
-| **Base Mainnet** | `0x96A6802D7721016bB9c1181aaf95900335734115` | [0xec5f35d0...](https://basescan.org/tx/0xec5f35d04f72347cda63bd219c3fc3b526a923490e8b539dfef2723489c6312d) |
+| **Base Mainnet (V2, production)** | `0x87B9fD42553067BeBc2Abf42c7045C8F2F7D1A79` | см. `DEPLOYMENT.md` |
+| Base Mainnet (V1, legacy) | `0x96A6802D7721016bB9c1181aaf95900335734115` | [0xec5f35d0...](https://basescan.org/tx/0xec5f35d04f72347cda63bd219c3fc3b526a923490e8b539dfef2723489c6312d) |
 
-**Исходный код:** `n4y.ai/demo/contracts/core/NameRegistry.sol`
+**Исходный код (V2):** `logos-protocol/contracts/core/NameRegistry.sol`
 
 ## Контекст
 Требования MVP к имени (handle):
@@ -29,7 +30,7 @@
 - Публичные операции:
   - `isAvailable(handle) -> bool`
   - `resolve(handle) -> controller`
-  - `registerName(handle)` — **однократная** регистрация свободного handle на `msg.sender` (controller).
+  - `registerName(handle, controller)` — **однократная** регистрация свободного handle на указанный `controller`.
 - Непередаваемость:
   - Нет функций transfer/update/approve; зарегистрированное имя нельзя перепривязать.
 - Нормализация:

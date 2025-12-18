@@ -10,8 +10,8 @@
 
 | Контракт | Путь | Тесты |
 |----------|------|-------|
-| TreasuryMultisig2of3 | `n4y.ai/demo/contracts/core/TreasuryMultisig2of3.sol` | ✅ |
-| LogosRegisterPaymaster | `n4y.ai/demo/contracts/core/LogosRegisterPaymaster.sol` | ✅ |
+| TreasuryMultisig2of3 | `logos-protocol/contracts/core/TreasuryMultisig2of3.sol` | ✅ |
+| LogosRegisterPaymaster | `logos-protocol/contracts/core/LogosRegisterPaymaster.sol` | ✅ |
 
 ## Контекст
 Требования MVP:
