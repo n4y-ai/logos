@@ -4,6 +4,12 @@
 
 **Ключевая идея:** любой разработчик может реализовать свой UI/Backend/AI-агента и создавать Logos **независимо от нас**, а **NameRegistry в Base** объединяет всех в одну экосистему через общий namespace имён (handle).
 
+## Манифест Логоса
+
+**Читать манифест:** [МАНИФЕСТ СОЗИДАНИЯ — Экосистема Логосов (v2.1)](./manifesto-ecosystem-logos-v2.1.md)  
+**Быстрая ссылка из корня:** [MANIFESTO.md](./MANIFESTO.md)  
+**Статус:** Общественное достояние.
+
 ---
 
 ## TL;DR для разработчиков
@@ -94,7 +100,7 @@ console.log("controller:", await registry.resolve(handle));
 
 ## Где читать спеки и ADR
 
-- **Манифест:** `manifesto-ecosystem-logos-v2.1.md`
+- **Манифест:** [manifesto-ecosystem-logos-v2.1.md](./manifesto-ecosystem-logos-v2.1.md)
 - **System prompt:** `system-prompt-logos-ecosystem-v2.1.md`
 - **Большая архитектура (long-term):** `LOGOS_ECOSYSTEM_SPECIFICATION.md`
 - **MVP Identity (текущее “как работает”):** `MVP_IDENTITY_REGISTRATION_SPEC_v1.md`
